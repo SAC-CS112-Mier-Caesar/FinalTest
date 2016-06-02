@@ -5,16 +5,16 @@ public class MainTest {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
-		Superman obj1 = new Superman(3500,500);
-		Bird bird = new Bird(10,3);
-		Airplane airplane = new Airplane(450,50);
-		Jetplane jetplane = new Jetplane(1000,120);
-		Missile missile = new Missile(2500,800);
+		FlyClass obj1 = new Superman(3500,500);
+		FlyClass bird = new Bird(10,3);
+		FlyClass airplane = new Airplane(450,50);
+		FlyClass jetplane = new Jetplane(1000,120);
+		FlyClass missile = new Missile(2500,800);
 		
 		
 		
 		//Superman object
-		int dTraveledPerMin = obj1.getAirSpeed()/60;
+		int dTraveledPerMin = obj1.getSpeed()/60;
 		
 		int dTraveledPerFiveMin = dTraveledPerMin*5;
 		int distanceTraveled=0;
@@ -25,7 +25,7 @@ public class MainTest {
 		System.out.printf("Supermans's distance traveled every %d min: %d miles\n",i*5,distanceTraveled);
 		}
 		
-		int elevationPerFiveMin = obj1.getAltiMeter()*5;
+		int elevationPerFiveMin = obj1.getAltMeter()*5;
 		System.out.println();;
 		int elevationTraveled = 0;
 		
@@ -36,7 +36,7 @@ public class MainTest {
 		}
 
 		//bird object
-		double birddTraveledPerMin = bird.getAirSpeed()/60.00;
+		double birddTraveledPerMin = bird.getSpeed()/60.00;
 		
 		double birddTraveledPerFiveMin = birddTraveledPerMin*5.00;
 		double birddistanceTraveled=0.00;
@@ -47,7 +47,7 @@ public class MainTest {
 		System.out.printf("Bird's distance traveled every %d min: %f miles \n",i*5,birddistanceTraveled);
 		}
 		
-		int birdelevationPerFiveMin = bird.getAltiMeter()*5;
+		int birdelevationPerFiveMin = bird.getAltMeter()*5;
 		System.out.println();;
 		int birdelevationTraveled = 0;
 		
@@ -59,7 +59,7 @@ public class MainTest {
 	}
 		
 		//airplane object
-				int airplanedTraveledPerMin = airplane.getAirSpeed()/60;
+				int airplanedTraveledPerMin = airplane.getSpeed()/60;
 				
 				int airplanedTraveledPerFiveMin = airplanedTraveledPerMin*5;
 				int airplanedistanceTraveled=0;
@@ -70,7 +70,7 @@ public class MainTest {
 				System.out.printf("Airplane's distance traveled every %d min: %d miles \n",i*5,airplanedistanceTraveled);
 				}
 				
-				int airplaneelevationPerFiveMin = airplane.getAltiMeter()*5;
+				int airplaneelevationPerFiveMin = airplane.getAltMeter()*5;
 				System.out.println();;
 				int airplaneelevationTraveled = 0;
 				
@@ -82,7 +82,7 @@ public class MainTest {
 			}
 				
 				//jetplane object
-				int jetplanedTraveledPerMin = jetplane.getAirSpeed()/60;
+				int jetplanedTraveledPerMin = jetplane.getSpeed()/60;
 				
 				int jetplanedTraveledPerFiveMin = jetplanedTraveledPerMin*5;
 				int jetplanedistanceTraveled=0;
@@ -93,7 +93,7 @@ public class MainTest {
 				System.out.printf("Jetplane's distance traveled every %d min: %d miles \n",i*5,jetplanedistanceTraveled);
 				}
 				
-				int jetplaneelevationPerFiveMin = jetplane.getAltiMeter()*5;
+				int jetplaneelevationPerFiveMin = jetplane.getAltMeter()*5;
 				System.out.println();;
 				int jetplaneelevationTraveled = 0;
 				
@@ -105,7 +105,7 @@ public class MainTest {
 			}
 				
 				//missile object
-				int missiledTraveledPerMin = missile.getAirSpeed()/60;
+				int missiledTraveledPerMin = missile.getSpeed()/60;
 				
 				int missiledTraveledPerFiveMin = missiledTraveledPerMin*5;
 				int missiledistanceTraveled=0;
@@ -116,7 +116,7 @@ public class MainTest {
 				System.out.printf("Missile's distance traveled every %d min: %d miles \n",i*5,missiledistanceTraveled);
 				}
 				
-				int missileelevationPerFiveMin = missile.getAltiMeter()*5;
+				int missileelevationPerFiveMin = missile.getAltMeter()*5;
 				System.out.println();;
 				int missileelevationTraveled = 0;
 				
@@ -126,5 +126,7 @@ public class MainTest {
 				System.out.printf("Missile elevation after %d min is: %d \n",i*5,missileelevationTraveled);
 				
 			}
+			
+				
 
 }}
