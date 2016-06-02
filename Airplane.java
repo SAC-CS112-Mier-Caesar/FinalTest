@@ -1,39 +1,19 @@
 
-public class Airplane implements FlyInterface {
+public class Airplane extends FlyClass {
 
-	private int speed;
-	private int elevationPM;
-	public Airplane(int speed, int elevationPM) {
-		this.speed=speed;
-		this.elevationPM=elevationPM;
+public Airplane(int x, int y) {
+		
+		super(x,y);
 	
-
-}
-
-	@Override
-	public void setAirSpeed(int airSpeed) {
-		this.speed=airSpeed;
-		
 	}
 
-	@Override
-	public void setAltiMeter(int elevationPM) {
-		this.elevationPM=elevationPM;
-		
-	}
-
-	@Override
-	public void fly() {
-		// TODO Auto-generated method stub
-		
+	public int getSpeed(){
+		return super.getSpeed();
 	}
 	
-	public int getAirSpeed(){
-		return speed;
-	}
-	
-	public int getAltiMeter(){
-		return elevationPM;
+	public int getAltMeter(){
+		return super.getAltMeter();
+		
 	}
 	
 }
