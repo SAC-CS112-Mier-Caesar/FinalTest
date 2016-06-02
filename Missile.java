@@ -1,36 +1,18 @@
 
-public class Missile implements FlyInterface{
+public class Missile extends FlyClass{
 
-	private int speed;
-	private int elevationPM;
-	public Missile(int speed, int elevationPM) {
-		this.speed=speed;
-		this.elevationPM=elevationPM;
-	}
-
-	@Override
-	public void setAirSpeed(int airSpeed) {
-		this.speed=airSpeed;
+public Missile(int x, int y) {
 		
+		super(x,y);
+	
 	}
 
-	@Override
-	public void setAltiMeter(int elevationPM) {
-		this.elevationPM=elevationPM;
-		
-	}
-
-	@Override
-	public void fly() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public int getAirSpeed(){
-		return speed;
+	public int getSpeed(){
+		return super.getSpeed();
 	}
 	
-	public int getAltiMeter(){
-		return elevationPM;
+	public int getAltMeter(){
+		return super.getAltMeter();
+		
 	}
 }
